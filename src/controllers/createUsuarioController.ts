@@ -6,7 +6,7 @@ class createUsuarioController {
         const {email, nome, senha } = request.body as {nome:string, email:string, senha:string};
 
         const usuarioService = new createUsuarioService()
-        const usuario = await usuarioService.execute({email, nome, senha});
+        const usuario = await usuarioService.execute({email, nome, senha})
 
         reply.send(usuario)
     }
